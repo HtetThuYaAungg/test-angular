@@ -1,0 +1,3 @@
+.top-header {
+  @apply flex w-full min-w-[24rem] bg-[#282828] text-white justify-center items-center py-2 text-xs font-bold;
+}

@@ -1,0 +1,18 @@
+.ekart-menu {
+  padding-top: 2vh;
+  padding: 1vh 1vh;
+  color: #36454f;
+  font-family: "Montserrat", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  width: 100%;
+  text-align: center;
+}
+
+.main-menu-container {
+  @apply flex w-full justify-center gap-2 sm:gap-12 font-thin text-sm py-1 pb-3 sm:px-7;
+}
+
+a {
+  @apply text-nowrap text-[#36454f] hover:text-blue-500;
+}

@@ -1,0 +1,14 @@
+/* .ekart--top--bar{
+  width:auto;
+  text-align: right;
+  padding-top: 3px;
+  padding-bottom: 15px;
+  padding-right: 30px;
+} */
+.top-menu-main {
+  @apply flex  w-full justify-center gap-2 sm:gap-10 font-light text-sm py-2 pb-3 sm:px-7;
+}
+
+a {
+  @apply text-nowrap text-[#36454f] hover:text-blue-500;
+}
