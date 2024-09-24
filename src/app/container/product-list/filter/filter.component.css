@@ -1,0 +1,8 @@
+.filter-container {
+  @apply flex flex-nowrap;
+  margin: 10px 0px;
+}
+input[type="radio"] {
+  margin-left: 10px;
+  margin-right: 5px;
+}

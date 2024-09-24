@@ -8,7 +8,7 @@ export class Product {
     size!: number[];
     color!: string[];
     price!: number;
-    is_in_inventory!: string;
+    is_in_inventory!: boolean;
     items_left!: number;
     imageURL!: string;
     slug!: string;
