@@ -18,7 +18,8 @@
   <p>Current element of array is : {{item}}</p>
 </div> -->
 
-<app-product-list [searchText]="searchText"></app-product-list>
+<app-product-list [searchText]="searchText" #productListComponent></app-product-list>
+<app-product-detail *ngIf="productListComponent.selectedProduct" [product]="productListComponent.selectedProduct"  [testHandleClick]="productListComponent.testHandle"></app-product-detail>
     <!-- <product-list [searchText]="searchText" #productListComponent></product-list>
     <product-detail *ngIf="productListComponent.selectedProduct"
         [productListComp]="productListComponent"></product-detail> -->

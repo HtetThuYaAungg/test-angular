@@ -1,4 +1,4 @@
-import { NgIf } from '@angular/common';
+import { NgClass, NgIf } from '@angular/common';
 import { Component, EventEmitter, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
@@ -6,7 +6,7 @@ import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-search',
   standalone: true,
-  imports: [FormsModule,NgIf],
+  imports: [FormsModule,NgIf,NgClass],
   templateUrl: './search.component.html',
   styleUrl: './search.component.css'
 })
@@ -17,10 +17,15 @@ export class SearchComponent {
   searchTextChanged: EventEmitter<string> = new EventEmitter<string>();   
 
   onSearchTextChanged() {
-    this.searchTextChanged.emit(this.searchText)
+    
   }
 
-  updatedSearchText(event:any) {
-    this.searchText = event.target.value;
+  updatedSearchText(inputEl: HTMLInputElement) {
+    // this.searchText = event.target.value;
+    this.searchText == inputEl.value;
+    this.searchTextChanged.emit(this.searchText)
+    console.log("hello",this.searchText)
   }
+
+
 }

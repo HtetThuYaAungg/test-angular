@@ -31,8 +31,9 @@
 
 .btn-search-disabled {
   padding: 12px 30px;
-  background-color: #aaa;
+  background-color: #28282b;
   margin-left: -1px;
+  opacity: 0.6;
   color: #999;
   border: #aaa 1px solid;
   border-radius: 2px;

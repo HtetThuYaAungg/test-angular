@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 import { ProductComponent } from "./product/product.component";
 import { NgFor, NgIf } from '@angular/common';
 import { FilterComponent } from "./filter/filter.component";
+import { Product } from '../../Models/Product';
 
 @Component({
   selector: 'app-product-list',
@@ -11,6 +12,8 @@ import { FilterComponent } from "./filter/filter.component";
   styleUrl: './product-list.component.css'
 })
 export class ProductListComponent {
+
+  selectedProduct!:Product;
 
   products = [
     {
@@ -546,11 +549,17 @@ export class ProductListComponent {
   @Input()
   searchText: string = ""
 
-  
 
   selectedFilterRadioButton: string = "all";
 
+  handleClick(prod: Product) {
+    // console.log("Button clicked", this.selectedProduct);
+    this.selectedProduct = prod
+  }
   
+  testHandle() {
+    console.log("test button clicked");
+  }
 
   onFilterChange(value: string) {
     console.log(value);
